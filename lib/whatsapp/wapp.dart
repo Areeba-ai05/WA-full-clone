@@ -36,7 +36,7 @@ class ExpandedClass extends StatelessWidget {
     'LOL, that was hilarious!',
   ];
   List userImage=[
-    '',
+    'assets/img1.jpg',
     '',
     '',
     '',
@@ -126,7 +126,8 @@ class ExpandedClass extends StatelessWidget {
                     {
                       return Card(
                         child: ListTile(
-                          leading: CircleAvatar(backgroundColor: Colors.black,),
+                          leading: CircleAvatar(
+                            backgroundImage: AssetImage(userImage[index])),
                           title: Text(senderName[index]),
                           subtitle: Text(lastMessages[index]),
                           trailing: Column(
@@ -146,9 +147,42 @@ class ExpandedClass extends StatelessWidget {
               )),
           Expanded
             (flex:10,
-              child: Container(
-                color: Colors.red,
-              )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(Icons.message, color: Colors.white),
+                        Text('Chats',style:TextStyle(color:Colors.white)),
+                      ],
+                    ),
+
+                    SizedBox(width: 10,),
+                    Column(
+                      children: [
+                        Icon(Icons.circle_outlined, color: Colors.white),
+                        Text('Updates',style:TextStyle(color:Colors.white)),
+                      ],
+                    ),
+                    SizedBox(width: 10,),
+                    Column(
+                      children: [
+                        Icon(Icons.people_alt_outlined,  color: Colors.white),
+                        Text('Communities',style:TextStyle(color:Colors.white)),
+                      ],
+                    ),
+                    SizedBox(width: 10,),
+                    Column(
+                      children: [
+                        Icon(Icons.call,  color: Colors.white),
+                        Text('Calls',style:TextStyle(color:Colors.white)),
+                      ],
+                    ),
+                  ],
+
+              ),
+          ),
         ],
       ),
     );
