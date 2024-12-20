@@ -39,17 +39,17 @@ class ExpandedClass extends StatelessWidget {
     'assets/img1.jpg',
     'assets/img2.jpg',
     'assets/img3.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
-    'assets/img1.jpg',
+    'assets/img4.jpg',
+    'assets/img5.jpg',
+    'assets/img6.jpg',
+    'assets/img7.jpg',
+    'assets/img8.jpg',
+    'assets/img9.jpg',
+    'assets/img10.jpg',
+    'assets/img11.jpg',
+    'assets/img12.jpg',
+    'assets/img13.jpg',
+    'assets/img14.jpg',
   ];
   List msgTiming=[
     '07:34 PM',
@@ -67,6 +67,22 @@ class ExpandedClass extends StatelessWidget {
     '12:09 PM',
     '10:40 AM',
 
+  ];
+  List totalMsg=[
+    '2',
+    '1',
+    '9',
+    '5',
+    '7',
+    '12',
+    '3',
+    '1',
+    '4',
+    '8',
+    '5',
+    '6',
+    '11',
+    '1',
   ];
   //LIST NAME
   @override
@@ -136,7 +152,7 @@ class ExpandedClass extends StatelessWidget {
                               CircleAvatar(
                                 backgroundColor: Colors.green,
                                 radius: 10,
-                                child: Text('9'),
+                                child: Text(totalMsg[index]),
                               )
                             ],
                           ),
