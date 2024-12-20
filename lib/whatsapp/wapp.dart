@@ -1,8 +1,57 @@
 import  'package:flutter/material.dart';
 
 class ExpandedClass extends StatelessWidget {
-  const ExpandedClass({super.key});
+   ExpandedClass({super.key});
+ List senderName=[
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+ ];
 
+ List lastMessages=[
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+ ];
+ List userImage=[
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+   '',
+ ];
+ //LIST NAME
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +70,14 @@ class ExpandedClass extends StatelessWidget {
               child: Container(
                   color: Colors.blue,
                   child: ListView.builder(
-                    itemCount: 5,//starting =0, ending =5-1
+                    itemCount: senderName.length,//starting =0, ending =5-1
                     itemBuilder: (context,index)
                     {
                       return Card(
                         child: ListTile(
                           leading: CircleAvatar(backgroundColor: Colors.black,),
-                          title: Text('Sender Name'),
-                          subtitle: Text('last message'),
+                          title: Text(senderName[index]),
+                          subtitle: Text(lastMessages[index]),
                           trailing: Text('09:12AM'),
                         ),
                       );
