@@ -24,9 +24,13 @@ class ExpandedClass extends StatelessWidget {
                     itemCount: 5,//starting =0, ending =5-1
                     itemBuilder: (context,index)
                     {
-                      return CircleAvatar(
-                        child:Text('${index+1}'),
-                        //child: Text(index.toString()),
+                      return Card(
+                        child: ListTile(
+                          leading: CircleAvatar(backgroundColor: Colors.black,),
+                          title: Text('Sender Name'),
+                          subtitle: Text('last message'),
+                          trailing: Text('09:12AM'),
+                        ),
                       );
                     },
                   )
