@@ -73,7 +73,15 @@ class ExpandedClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanded Widget'),
+        backgroundColor:Colors.black,
+        title:Text('WhatsApp',
+          style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
+        actions: [
+          Icon(Icons.camera_alt_outlined,color: Colors.white,),
+          SizedBox(width: 10,),
+          Icon(Icons.more_vert,color: Colors.white,),
+          SizedBox(width: 10,),
+        ],
       ),
       body: Column(
         children: [
@@ -109,10 +117,6 @@ class ExpandedClass extends StatelessWidget {
                       );
                     },
                   )
-
-
-
-
               )),
           Expanded
             (flex:10,
