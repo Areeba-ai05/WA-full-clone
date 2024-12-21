@@ -112,7 +112,7 @@ class ExpandedClass extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                     border: Border.all(
                       color: Colors.grey,
-                      width: 5,
+                      width: 3,
                     ),
                   ),
                   child:Padding(
@@ -135,7 +135,7 @@ class ExpandedClass extends StatelessWidget {
           Expanded
             (flex:80,
               child: Container(
-                  color: Colors.blue,
+                 // color: Colors.blue,
                   child: ListView.builder(
                     itemCount: senderName.length,//starting =0, ending =5-1
                     itemBuilder: (context,index)
