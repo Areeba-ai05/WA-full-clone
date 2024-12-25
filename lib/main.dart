@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:waclone/whatsapp/wapp.dart';
+import 'package:waclone/View/starting-view/splash-view/splash-view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-        home: ExpandedClass()
+        home: SplashScreen()
+      //ExpandedClass()
 
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );

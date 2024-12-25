@@ -1,4 +1,5 @@
 import  'package:flutter/material.dart';
+import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
 
 class ExpandedClass extends StatelessWidget {
   ExpandedClass({super.key});
@@ -166,31 +167,19 @@ class ExpandedClass extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-
-
-                SizedBox(width: 10,),
-                Column(
-                  children: [
-                    Icon(Icons.circle_outlined, color: Colors.white),
-                    Text('Updates',style:TextStyle(color:Colors.white)),
-                  ],
-                ),
-                SizedBox(width: 10,),
-                Column(
-                  children: [
-                    Icon(Icons.people_alt_outlined,  color: Colors.white),
-                    Text('Communities',style:TextStyle(color:Colors.white)),
-                  ],
-                ),
-                SizedBox(width: 10,),
-                Column(
-                  children: [
-                    Icon(Icons.call,  color: Colors.white),
-                    Text('Calls',style:TextStyle(color:Colors.white)),
-                  ],
-                ),
+                 ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
+                   ExpandedClass();
+                 }),
+                ColumnButton( icon: Icons.circle_outlined,text:'Updates',  onTap: (){
+                  ExpandedClass();
+                }),
+                ColumnButton(icon: Icons.people_alt_outlined,text:'Communities',  onTap: (){
+                  ExpandedClass();
+                }),
+                ColumnButton(icon: Icons.call,text:'Calls',  onTap: (){
+                  ExpandedClass();
+                }),
               ],
-
             ),
           ),
         ],
