@@ -1,5 +1,6 @@
 import  'package:flutter/material.dart';
 import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
+import 'package:waclone/Controller/widgets/chatsView%20widget.dart';
 import 'package:waclone/View/homeview/update-view/view-status/updates-home-view.dart';
 
 class ExpandedClass extends StatelessWidget {
@@ -137,33 +138,9 @@ class ExpandedClass extends StatelessWidget {
               )),
           Expanded
             (flex:80,
-              child: Container(
-                // color: Colors.blue,
-                  child: ListView.builder(
-                    itemCount: senderName.length,//starting =0, ending =5-1
-                    itemBuilder: (context,index)
-                    {
-                      return Card(
-                        child: ListTile(
-                          leading: CircleAvatar(
-                              backgroundImage: AssetImage(userImage[index])),
-                          title: Text(senderName[index]),
-                          subtitle: Text(lastMessages[index]),
-                          trailing: Column(
-                            children: [
-                              Text(msgTiming[index]),
-                              CircleAvatar(
-                                backgroundColor: Colors.green,
-                                radius: 10,
-                                child: Text(totalMsg[index]),
-                              )
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  )
-              )),
+              child:
+          select==1?ExpandedClass() :UpdatesHomeScreen()
+          ),
           Expanded
             (flex:10,
             child: Row(
@@ -171,18 +148,16 @@ class ExpandedClass extends StatelessWidget {
               children: [
                  ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
                    select=1;
-                   setState(){
 
-                   });
                  }),
                 ColumnButton( icon: Icons.circle_outlined,text:'Updates',  onTap: (){
-                  UpdatesHomeScreen();
+                 select=2;
                 }),
                 ColumnButton(icon: Icons.people_alt_outlined,text:'Communities',  onTap: (){
-                  ExpandedClass();
+                  select=3;
                 }),
                 ColumnButton(icon: Icons.call,text:'Calls',  onTap: (){
-                  ExpandedClass();
+                  select=4;
                 }),
               ],
             ),
