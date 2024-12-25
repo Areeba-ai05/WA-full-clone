@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:waclone/View/starting-view/splash-view/splash-view.dart';
+import 'package:waclone/View/starting-view/intro-view/intro-view.dart';
+//import 'package:waclone/View/starting-view/splash-view/splash-view.dart';
 
 
 void main() {
@@ -35,8 +36,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-        home: SplashScreen()
-      //ExpandedClass()
+        home: //SplashScreen()
+      ExpandedClass()
 
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );

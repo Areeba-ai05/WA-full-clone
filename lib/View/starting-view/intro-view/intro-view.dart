@@ -2,98 +2,22 @@ import  'package:flutter/material.dart';
 import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
 import 'package:waclone/Controller/widgets/calls-widget.dart';
 import 'package:waclone/Controller/widgets/chatsView%20widget.dart';
+//import 'package:waclone/Controller/widgets/chatsView%20widget.dart';
 import 'package:waclone/Controller/widgets/community-widget.dart';
 import 'package:waclone/View/homeview/update-view/view-status/updates-home-view.dart';
 
-class ExpandedClass extends StatelessWidget {
+class ExpandedClass extends StatefulWidget {
+  const ExpandedClass({super.key});
+
+  @override
+  State<ExpandedClass> createState() => _ExpandedClassState();
+}
+
+class _ExpandedClassState extends State<ExpandedClass> {
   int select=1;
-  ExpandedClass({super.key});
-  List senderName=[
-    'Abeeha',
-    'Zunaisha',
-    'Maryam',
-    'Hania',
-    'Sara',
-    'Bushra',
-    'Dania',
-    'Eshmal',
-    'Fareeha',
-    'Irum',
-    'Eman',
-    'Vania',
-    'Roha',
-    'Hafsa',
-  ];
-
-  List lastMessages=[
-    'Hey! Whats up?',
-    'On my way, see you soon!',
-    'Can you send me the file?',
-    'Don’t forget about our meeting tomorrow',
-    'Good morning! Have a great day ahead',
-    'Where are you right now',
-    'Thanks a lot! You’re the best. ',
-    'Let’s catch up this weekend?',
-    'Sorry, I missed your call. What’s up',
-    'Happy birthday!',
-    'Let me know when you’re free to chat',
-    'Check this out! [link/image',
-    'Don’t forget about our meeting tomorrow',
-    'LOL, that was hilarious!',
-  ];
-  List userImage=[
-    'assets/img1.jpg',
-    'assets/img2.jpg',
-    'assets/img3.jpg',
-    'assets/img4.jpg',
-    'assets/img5.jpg',
-    'assets/img6.jpg',
-    'assets/img7.jpg',
-    'assets/img8.jpg',
-    'assets/img9.jpg',
-    'assets/img10.jpg',
-    'assets/img11.jpg',
-    'assets/img12.jpg',
-    'assets/img13.jpg',
-    'assets/img14.jpg',
-  ];
-  List msgTiming=[
-    '07:34 PM',
-    '05:55 AM',
-    '1:15 PM',
-    '10:25 PM',
-    'Yesterday',
-    '11:50 AM',
-    '07:34 PM',
-    'Yesterday',
-    '12/8/24',
-    '4:27 PM',
-    '8:55 AM',
-    '6:21 PM',
-    '12:09 PM',
-    '10:40 AM',
-
-  ];
-  List totalMsg=[
-    '2',
-    '1',
-    '9',
-    '5',
-    '7',
-    '12',
-    '3',
-    '1',
-    '4',
-    '8',
-    '5',
-    '6',
-    '11',
-    '1',
-  ];
-  //LIST NAME
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
         backgroundColor:Colors.black,
         title:Text('WhatsApp',
@@ -141,25 +65,37 @@ class ExpandedClass extends StatelessWidget {
           Expanded
             (flex:80,
               child:
-          select==1?ExpandedClass() :select==2? UpdatesHomeScreen(): select==3?CommunityView() :CallsView()
+              select==1?ChatView() :select==2? UpdatesHomeScreen(): select==3?CommunityView() :CallsView()
           ),
           Expanded
             (flex:10,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                 ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
-                   select=1;
+                ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
+                  select=1;
+                  setState(() {
 
-                 }),
+                  });
+
+                }),
                 ColumnButton( icon: Icons.circle_outlined,text:'Updates',  onTap: (){
-                 select=2;
+                  select=2;
+                  setState(() {
+
+                  });
                 }),
                 ColumnButton(icon: Icons.people_alt_outlined,text:'Communities',  onTap: (){
                   select=3;
+                  setState(() {
+
+                  });
                 }),
                 ColumnButton(icon: Icons.call,text:'Calls',  onTap: (){
                   select=4;
+                  setState(() {
+
+                  });
                 }),
               ],
             ),
