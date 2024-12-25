@@ -166,13 +166,7 @@ class ExpandedClass extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(Icons.message, color: Colors.white),
-                    Text('Chats',style:TextStyle(color:Colors.white)),
-                  ],
-                ),
+
 
                 SizedBox(width: 10,),
                 Column(
