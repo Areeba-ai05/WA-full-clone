@@ -1,6 +1,8 @@
 import  'package:flutter/material.dart';
 import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
+import 'package:waclone/Controller/widgets/calls-widget.dart';
 import 'package:waclone/Controller/widgets/chatsView%20widget.dart';
+import 'package:waclone/Controller/widgets/community-widget.dart';
 import 'package:waclone/View/homeview/update-view/view-status/updates-home-view.dart';
 
 class ExpandedClass extends StatelessWidget {
@@ -139,7 +141,7 @@ class ExpandedClass extends StatelessWidget {
           Expanded
             (flex:80,
               child:
-          select==1?ExpandedClass() :UpdatesHomeScreen()
+          select==1?ExpandedClass() :select==2? UpdatesHomeScreen(): select==3?CommunityView() :CallsView()
           ),
           Expanded
             (flex:10,
