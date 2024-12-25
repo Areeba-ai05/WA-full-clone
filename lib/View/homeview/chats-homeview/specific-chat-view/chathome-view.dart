@@ -61,9 +61,7 @@ class SpecificChat extends StatelessWidget {
       child:ListView.builder(itemCount:senderName.length,
       itemBuilder: (context,index){
         return ListTile(
-          onTap: (){
-            Navigator.push(context, CupertinoPageRoute(builder: (context)=>SpecificChat()));
-          },
+
           title:Text(senderName[index]) ,
           leading:CircleAvatar(
               backgroundImage: AssetImage(userImage[index])
