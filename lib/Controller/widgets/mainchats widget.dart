@@ -102,7 +102,7 @@ class ChatView extends StatelessWidget {
                         child: ListTile(
                           onTap: (){
                             Navigator.push(context, CupertinoPageRoute(builder: (context)=>
-                                SpecificChat(title:senderName)));
+                                SpecificChat()));
                           },
                           leading: CircleAvatar(
                               backgroundImage: AssetImage(userImage[index])),
