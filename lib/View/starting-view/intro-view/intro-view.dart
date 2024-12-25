@@ -1,7 +1,9 @@
 import  'package:flutter/material.dart';
 import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
+import 'package:waclone/View/homeview/update-view/view-status/updates-home-view.dart';
 
 class ExpandedClass extends StatelessWidget {
+  int select=1;
   ExpandedClass({super.key});
   List senderName=[
     'Abeeha',
@@ -168,10 +170,13 @@ class ExpandedClass extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                  ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
-                   ExpandedClass();
+                   select=1;
+                   setState(){
+
+                   });
                  }),
                 ColumnButton( icon: Icons.circle_outlined,text:'Updates',  onTap: (){
-                  ExpandedClass();
+                  UpdatesHomeScreen();
                 }),
                 ColumnButton(icon: Icons.people_alt_outlined,text:'Communities',  onTap: (){
                   ExpandedClass();
