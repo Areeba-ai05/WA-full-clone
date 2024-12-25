@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:waclone/View/homeview/chats-homeview/specific-chat-view/chathome-view.dart';
+import  'package:flutter/material.dart';
+
+
 
 class ChatView extends StatelessWidget {
   ChatView({super.key});
@@ -100,9 +101,6 @@ class ChatView extends StatelessWidget {
                     {
                       return Card(
                         child: ListTile(
-                          onTap: (){
-                            Navigator.push(context, CupertinoPageRoute(builder: (context)=>SpecificChat()));
-                          },
                           leading: CircleAvatar(
                               backgroundImage: AssetImage(userImage[index])),
                           title: Text(senderName[index]),

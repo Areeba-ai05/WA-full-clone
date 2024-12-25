@@ -51,23 +51,7 @@ class SpecificChat extends StatelessWidget {
     'assets/img13.jpg',
     'assets/img14.jpg',
   ];
-  List msgTiming=[
-    '07:34 PM',
-    '05:55 AM',
-    '1:15 PM',
-    '10:25 PM',
-    'Yesterday',
-    '11:50 AM',
-    '07:34 PM',
-    'Yesterday',
-    '12/8/24',
-    '4:27 PM',
-    '8:55 AM',
-    '6:21 PM',
-    '12:09 PM',
-    '10:40 AM',
 
-  ];
 
   SpecificChat({super.key});
 
@@ -77,6 +61,9 @@ class SpecificChat extends StatelessWidget {
       child:ListView.builder(itemCount:senderName.length,
       itemBuilder: (context,index){
         return ListTile(
+          onTap: (){
+            Navigator.push(context, CupertinoPageRoute(builder: (context)=>SpecificChat()));
+          },
           title:Text(senderName[index]) ,
           leading:CircleAvatar(
               backgroundImage: AssetImage(userImage[index])
