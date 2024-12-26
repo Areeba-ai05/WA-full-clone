@@ -17,52 +17,83 @@ class _ExpandedClassState extends State<ExpandedClass> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-        backgroundColor:Colors.black,
-        title:Text('WhatsApp',
-          style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
-        actions: [
-          Icon(Icons.camera_alt_outlined,color: Colors.white,),
-          SizedBox(width: 10,),
-          Icon(Icons.more_vert,color: Colors.white,),
-          SizedBox(width: 10,),
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor:Colors.black,
+      //   title:Text('WhatsApp',
+      //     style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
+      //   actions: [
+      //     Icon(Icons.camera_alt_outlined,color: Colors.white,),
+      //     SizedBox(width: 10,),
+      //     Icon(Icons.more_vert,color: Colors.white,),
+      //     SizedBox(width: 10,),
+      //   ],
+      // ),
       backgroundColor: Colors.blueGrey,
       body: Column(
         children: [
           Expanded
-            (flex:10,
-              child: Container(
-                //color: Colors.red,
-                  height:5,
-                  width: 500,
-                  decoration:  BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 3,
+            (flex:20,
+              child:
+              Column(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                      Text('WhatsApp',
+                          style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
+                        Row(
+                          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(Icons.camera_alt_outlined,color: Colors.white,),
+                            SizedBox(width: 10,),
+                            Icon(Icons.more_vert,color: Colors.white,),
+                            SizedBox(width: 10,),
+                          ],
+                        ),
+
+                      ],
                     ),
                   ),
-                  child:Padding(
-                    padding: const EdgeInsets.only(top: 1.0, left: 50.0),
-                    child:Row(
-                      children: [
-                        Icon(
-                          Icons.circle_outlined, // Replace with any icon of your choice
-                          size: 30,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: 10), // Add spacing between icon and text
-                        Text(
-                          'Ask Meta AI or Search',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w100,
-                              color: Colors.white),),],),)
+                  Row(
+                    children: [
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 1.0, left: 50.0),
+                          child:Row(
+                            children: [
+                              Container(
+                                height: 30,
+                                width: 400,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.grey,
+                                ),
+                                child:
+                                Column(
+                                  children: [
+                                    Icon(
+                                      Icons.circle_outlined, // Replace with any icon of your choice
+                                      size: 30,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Ask Meta AI or Search',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w100,
+                                          color: Colors.white),),
+                                  ],
+                                ),
+                              ),
+
+                            ],),),
+                      ),
+                    ],
+                  ),
+                ],
               )),
           Expanded
-            (flex:80,
+            (flex:70,
               child:
               select==1?ChatView() :select==2? UpdatesHomeScreen(): select==3?CommunityView() :CallsView()
           ),

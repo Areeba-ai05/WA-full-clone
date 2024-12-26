@@ -11,6 +11,6 @@ class UpdatesHomeScreen extends StatefulWidget {
 class _UpdatesHomeScreenState extends State<UpdatesHomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return AppBarWidget(text: 'Updates', icon: Icons.camera_alt_outlined,);
+    return Scaffold();//AppBarWidget(text: 'Updates', icon: Icons.camera_alt_outlined,);
   }
 }

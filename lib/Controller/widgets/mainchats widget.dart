@@ -90,11 +90,9 @@ class ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          Container(
-// color: Colors.blue,
-                  child: ListView.builder(
+      child:
+
+          ListView.builder(
                     itemCount: senderName.length,//starting =0, ending =5-1
                     itemBuilder: (context,index)
                     {
@@ -121,10 +119,9 @@ class ChatView extends StatelessWidget {
                         ),
                       );
                     },
-                  )
+
               ),
-        ],
-      ),
+
     );
   }
 }

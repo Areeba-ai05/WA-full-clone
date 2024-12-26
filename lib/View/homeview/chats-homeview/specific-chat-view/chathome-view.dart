@@ -57,19 +57,21 @@ class SpecificChat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child:ListView.builder(itemCount:senderName.length,
-      itemBuilder: (context,index){
-        return ListTile(
+    return Scaffold(
+      body: Container(
+        child:ListView.builder(itemCount:senderName.length,
+        itemBuilder: (context,index){
+          return ListTile(
 
-          title:Text(senderName[index]) ,
-          leading:CircleAvatar(
-              backgroundImage: AssetImage(userImage[index])
-          ) ,
-          subtitle:Text(lastMessages[index]),
-        );
-      } ,)
-      //
+            title:Text(senderName[index]) ,
+            leading:CircleAvatar(
+                backgroundImage: AssetImage(userImage[index])
+            ) ,
+            subtitle:Text(lastMessages[index]),
+          );
+        } ,)
+        //
+      ),
     );
   }
 }
