@@ -58,30 +58,36 @@ class _ExpandedClassState extends State<ExpandedClass> {
                     children: [
                       Container(
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 1.0, left: 50.0),
+                          padding: const EdgeInsets.only(top: 10.0, left: 30.0),
                           child:Row(
                             children: [
                               Container(
-                                height: 30,
-                                width: 400,
+                                height: 40,
+                                width: 450,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(30),
                                   color: Colors.grey,
                                 ),
                                 child:
-                                Column(
+                                Row(
                                   children: [
-                                    Icon(
-                                      Icons.circle_outlined, // Replace with any icon of your choice
-                                      size: 30,
-                                      color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 18.0),
+                                      child: Icon(
+                                        Icons.circle_outlined, // Replace with any icon of your choice
+                                        size: 30,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                    Text(
-                                      'Ask Meta AI or Search',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w100,
-                                          color: Colors.white),),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 25.0),
+                                      child: Text(
+                                        'Ask Meta AI or Search',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w100,
+                                            color: Colors.white),),
+                                    ),
                                   ],
                                 ),
                               ),
