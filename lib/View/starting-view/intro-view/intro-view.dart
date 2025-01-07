@@ -3,7 +3,7 @@ import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
 import 'package:waclone/Controller/widgets/calls-widget.dart';
 import 'package:waclone/Controller/widgets/community-widget.dart';
 import 'package:waclone/Controller/widgets/mainchats%20widget.dart';
-import 'package:waclone/View/homeview/update-view/updates-home-view.dart';
+//import 'package:waclone/View/homeview/update-view/updates-home-view.dart';
 
 import '../../homeview/update-view/updateshomeview.dart';
 
@@ -30,21 +30,23 @@ class _ExpandedClassState extends State<ExpandedClass> {
       //     SizedBox(width: 10,),
       //   ],
       // ),
-      backgroundColor: Colors.black,
+backgroundColor: Colors.blueAccent,
       body: Column(
         children: [
           Expanded
-            (flex:20,
+            (
+              flex:20,
               child:
               Column(
                 children: [
                   Container(
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       Text('WhatsApp',
                           style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
                         Row(
-                          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
                           children: [
                             Icon(Icons.camera_alt_outlined,color: Colors.white,),
                             SizedBox(width: 10,),
@@ -103,11 +105,12 @@ class _ExpandedClassState extends State<ExpandedClass> {
           Expanded
             (flex:70,
               child:
-              select==1?ChatView() :select==2? UpdatesHomeScreen(): select==3?CommunityView() :CallsView()
+              select==1?ChatView() :select==2? UpdatesHomeScreen_(): select==3?CommunityView() :CallsView()
           ),
           Expanded
             (flex:10,
             child: Row(
+
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
@@ -117,7 +120,7 @@ class _ExpandedClassState extends State<ExpandedClass> {
                   });
 
                 }),
-                ColumnButton( icon: Icons.circle_outlined,text:'Updates',  onTap: (){
+                ColumnButton(icon: Icons.circle_outlined,text:'Updates' ,  onTap: (){
                   select=2;
                   setState(() {
 
