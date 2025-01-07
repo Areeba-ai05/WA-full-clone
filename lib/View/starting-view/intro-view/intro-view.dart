@@ -3,7 +3,9 @@ import 'package:waclone/Controller/widgets/button-navigation%20widget.dart';
 import 'package:waclone/Controller/widgets/calls-widget.dart';
 import 'package:waclone/Controller/widgets/community-widget.dart';
 import 'package:waclone/Controller/widgets/mainchats%20widget.dart';
-import 'package:waclone/View/homeview/update-view/view-status/updates-home-view.dart';
+import 'package:waclone/View/homeview/update-view/updates-home-view.dart';
+
+import '../../homeview/update-view/updateshomeview.dart';
 
 class ExpandedClass extends StatefulWidget {
   const ExpandedClass({super.key});
@@ -28,7 +30,7 @@ class _ExpandedClassState extends State<ExpandedClass> {
       //     SizedBox(width: 10,),
       //   ],
       // ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           Expanded
