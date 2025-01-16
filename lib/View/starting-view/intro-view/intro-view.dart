@@ -30,7 +30,7 @@ class _ExpandedClassState extends State<ExpandedClass> {
       //     SizedBox(width: 10,),
       //   ],
       // ),
-backgroundColor: Colors.blueAccent,
+backgroundColor: Colors.black,
       body: Column(
         children: [
           Expanded
@@ -40,29 +40,31 @@ backgroundColor: Colors.blueAccent,
               Column(
                 children: [
                   Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                      Text('WhatsApp',
-                          style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
-                        Row(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Text('WhatsApp',
+                            style: TextStyle(fontSize:20,fontWeight: FontWeight.w500, color:Colors.white),),
+                          Row(
 
-                          children: [
-                            Icon(Icons.camera_alt_outlined,color: Colors.white,),
-                            SizedBox(width: 10,),
-                            Icon(Icons.more_vert,color: Colors.white,),
-                            SizedBox(width: 10,),
-                          ],
-                        ),
-
-                      ],
+                            children: [
+                              Icon(Icons.camera_alt_outlined,color: Colors.white,),
+                              SizedBox(width: 10,),
+                              Icon(Icons.more_vert,color: Colors.white,),
+                              SizedBox(width: 10,),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Row(
                     children: [
                       Container(
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 10.0, left: 30.0),
+                          padding: const EdgeInsets.only(top: 25.0, left: 30.0),
                           child:Row(
                             children: [
                               Container(
@@ -109,37 +111,64 @@ backgroundColor: Colors.blueAccent,
           ),
           Expanded
             (flex:10,
-            child: Row(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      select = 1;
+                      setState(() {});
+                    },
+                    child: Column(
+                      children: [
+                        Icon(Icons.chat_outlined, color: Colors.white), // White icon
+                        Text('Chats', style: TextStyle(color: Colors.white)), // White text
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      select = 2;
+                      setState(() {});
+                    },
+                    child: Column(
+                      children: [
+                        Icon(Icons.circle_outlined, color: Colors.white), // White icon
+                        Text('Updates', style: TextStyle(color: Colors.white)), // White text
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      select = 3;
+                      setState(() {});
+                    },
+                    child: Column(
+                      children: [
+                        Icon(Icons.people_alt_outlined, color: Colors.white), // White icon
+                        Text('Communities', style: TextStyle(color: Colors.white)), // White text
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      select = 4;
+                      setState(() {});
+                    },
+                    child: Column(
+                      children: [
+                        Icon(Icons.call, color: Colors.white), // White icon
+                        Text('Calls', style: TextStyle(color: Colors.white)), // White text
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+            ,
 
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ColumnButton( icon: Icons.chat_outlined,text:'Chats', onTap: (){
-                  select=1;
-                  setState(() {
-
-                  });
-
-                }),
-                ColumnButton(icon: Icons.circle_outlined,text:'Updates' ,  onTap: (){
-                  select=2;
-                  setState(() {
-
-                  });
-                }),
-                ColumnButton(icon: Icons.people_alt_outlined,text:'Communities',  onTap: (){
-                  select=3;
-                  setState(() {
-
-                  });
-                }),
-                ColumnButton(icon: Icons.call,text:'Calls',  onTap: (){
-                  select=4;
-                  setState(() {
-
-                  });
-                }),
-              ],
-            ),
           ),
         ],
       ),
